@@ -1,0 +1,14 @@
+# Variables de entorno y credenciales
+.env
+*.env.local
+
+# Backups y volcados de base de datos locales
+*.dump
+*.sql.bak
+*.log
+
+# Archivos de sistema e IDEs
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
