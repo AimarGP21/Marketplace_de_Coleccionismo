@@ -1,0 +1,58 @@
+import { CollectibleItem } from '@/types';
+
+export const COLLECTIBLE_ITEMS: CollectibleItem[] = [
+  {
+    id: 'col-charizard-1st-psa10',
+    title: '1999 Pokémon Base Set 1st Edition Charizard Holographic #4',
+    category: 'Cartas TCG',
+    price: 350.00,
+    amountInCents: 35000,
+    currency: 'usd',
+    image: 'https://images.unsplash.com/photo-1613771404784-3a5686aa2be3?auto=format&fit=crop&w=800&q=80',
+    rarity: 'Ultra Raro / Grial',
+    condition: 'PSA 10 Gem Mint',
+    description: 'La joya definitiva del coleccionismo Pokémon. Ejemplar impecable certificado por PSA con centrado perfecto 50/50 y foil sin micro-rayas.',
+    seller: {
+      name: 'Kanto Vault Relics',
+      rating: 4.98,
+      salesCount: 420,
+    },
+    verifiedAuthenticity: true,
+  },
+  {
+    id: 'col-spiderman-af15-cgc',
+    title: 'Amazing Fantasy #15 (1ra aparición de Spider-Man, 1962)',
+    category: 'Cómics',
+    price: 850.00,
+    amountInCents: 85000,
+    currency: 'usd',
+    image: 'https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&w=800&q=80',
+    rarity: 'Silver Age Histórico',
+    condition: 'CGC 8.5 Very Fine+',
+    description: 'El debut histórico de Peter Parker en el universo Marvel por Stan Lee y Steve Ditko. Páginas blancas (OW/W) y grapas originales sin óxido.',
+    seller: {
+      name: 'Gotham Rare Comics',
+      rating: 4.95,
+      salesCount: 310,
+    },
+    verifiedAuthenticity: true,
+  },
+  {
+    id: 'col-gold-double-eagle-1907',
+    title: 'Moneda Saint-Gaudens Double Eagle $20 Oro (1907)',
+    category: 'Monedas Antiguas',
+    price: 620.00,
+    amountInCents: 62000,
+    currency: 'usd',
+    image: 'https://images.unsplash.com/photo-1549465220-1a8b9238cd48?auto=format&fit=crop&w=800&q=80',
+    rarity: 'Numismática de Alto Grado',
+    condition: 'PCGS MS-65 High Relief',
+    description: 'Diseñada por el legendario escultor Augustus Saint-Gaudens a petición del presidente Theodore Roosevelt. Acuñada en oro de 0.900 milésimas.',
+    seller: {
+      name: 'Apex Numismatics',
+      rating: 5.0,
+      salesCount: 185,
+    },
+    verifiedAuthenticity: true,
+  },
+];
