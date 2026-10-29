@@ -3,3 +3,5 @@ uvicorn[standard]>=0.28.0
 stripe>=8.0.0
 python-dotenv>=1.0.0
 pydantic>=2.6.0
+qrcode[pil]>=7.4.2
+pillow>=10.2.0

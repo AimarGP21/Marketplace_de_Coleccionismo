@@ -4,7 +4,9 @@ from app.config import STRIPE_SECRET_KEY, STRIPE_WEBHOOK_SECRET
 
 class StripeService:
     def __init__(self):
-        self._ensure_api_key()
+        # Configurar api_key si está definida, pero no bloquear el arranque de la app si no se cuenta aún con ella
+        if STRIPE_SECRET_KEY and not STRIPE_SECRET_KEY.startswith("sk_test_..."):
+            stripe.api_key = STRIPE_SECRET_KEY
 
     def _ensure_api_key(self):
         if not STRIPE_SECRET_KEY or STRIPE_SECRET_KEY.startswith("sk_test_..."):
@@ -53,7 +55,6 @@ class StripeService:
 
     def confirm_payment_intent(self, payment_intent_id: str) -> stripe.PaymentIntent:
         self._ensure_api_key()
-        # En caso de necesitar confirmacion forzada desde backend si no se uso return_url
         intent = stripe.PaymentIntent.retrieve(payment_intent_id)
         if intent.status == "requires_confirmation":
             return stripe.PaymentIntent.confirm(payment_intent_id)
